@@ -37,7 +37,7 @@ export default function Edit() {
            description:description
         }
 
-        axios.put('http://localhost:4000/api/trip/'+id, trip)
+        axios.put('http://localhost:4000/api/editTrip/'+id, trip)
         .then((res)=>{
             navigate('/read');
         })
@@ -48,7 +48,7 @@ export default function Edit() {
     }
     return (
         <div>
-            <h2>Hello from Edit component!</h2>
+            <h2>Hello from Edit Component!</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label>Edit Trip Location: </label>
@@ -70,7 +70,7 @@ export default function Edit() {
                     <label>Edit Trip Description: </label>
                     <input type="text"
                         className="form-control"
-                        value={author}
+                        value={description}
                         onChange={(e) => { setDescription(e.target.value) }}
                     />
                 </div>
