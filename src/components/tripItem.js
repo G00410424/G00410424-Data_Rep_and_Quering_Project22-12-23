@@ -7,7 +7,7 @@ function TripItem(props) {
     return (
         <div>
             <Card>
-                <Card.Header>{props.myTrip.title}</Card.Header>
+                <Card.Header>{props.myTrip.location}</Card.Header>
                 <Card.Body>
                     <blockquote className="blockquote mb-0">
                         <img src={props.myTrip.cover}></img>
