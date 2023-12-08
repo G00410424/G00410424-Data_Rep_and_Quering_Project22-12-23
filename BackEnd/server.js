@@ -31,7 +31,7 @@ async function main() {
   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
 
-const bookSchema = new mongoose.Schema({
+const tripSchema = new mongoose.Schema({
   location:String,
   cover:String,
   description:String
@@ -58,7 +58,7 @@ app.put('/api/trip/:id', async(req, res)=>{
 app.post('/api/trip', (req,res)=>{
     console.log(req.body);
 
-    bookModel.create({
+    tripModel.create({
       location:req.body.location,
       cover:req.body.cover,
       description:req.body.description
