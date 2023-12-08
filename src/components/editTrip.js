@@ -13,7 +13,6 @@ export default function Edit() {
 
     useEffect(
         ()=>{
-
             axios.get('http://localhost:4000/api/trip/'+id)
             .then((response)=>{
                 setLocation(response.data.location);
