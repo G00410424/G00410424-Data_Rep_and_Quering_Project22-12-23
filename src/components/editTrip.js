@@ -36,7 +36,7 @@ export default function Edit() {
            description:description
         }
 
-        axios.put('http://localhost:4000/api/editTrip/'+id, trip)
+        axios.put('http://localhost:4000/api/trip/'+id, trip) //CHANGE WAS HERE: axios.put('http://localhost:4000/api/editTrip/'+id, trip)
         .then((res)=>{
             navigate('/read');
         })
