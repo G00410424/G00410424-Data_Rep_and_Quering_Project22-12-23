@@ -67,16 +67,16 @@ export default function Edit() {
                     />
                 </div>
                 <div className="form-group">
-                    <label>Edit Book Author: </label>
+                    <label>Edit Trip Description: </label>
                     <input type="text"
                         className="form-control"
                         value={author}
-                        onChange={(e) => { setAuthor(e.target.value) }}
+                        onChange={(e) => { setDescription(e.target.value) }}
                     />
                 </div>
                 <div>
                     <input type="submit"
-                    value="Edit Book">
+                    value="Edit Trip">
                         </input>
                 </div>
             </form>
