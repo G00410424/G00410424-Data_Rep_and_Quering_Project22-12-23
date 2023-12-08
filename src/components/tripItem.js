@@ -22,7 +22,7 @@ function TripItem(props) {
                     (e)=>{
                         e.preventDefault();
 
-            axios.delete('http://localhost:4000/api/trips/'+props.myTrip._id)
+            axios.delete('http://localhost:4000/api/trip/'+props.myTrip._id)
                         .then((res)=>{
                             let reload = props.Reload();
                         })
