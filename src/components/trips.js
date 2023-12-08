@@ -4,7 +4,7 @@ function Trips(props){
 
     return props.myTrips.map(
         (trip)=>{
-            return <tripItem myTrip={trip} key={trip._id} Reload={()=>{props.ReloadData();}}></tripItem>
+            return <TripItem myTrip={trip} key={trip._id} Reload={()=>{props.ReloadData();}}></TripItem>
         }
     );
 
