@@ -31,7 +31,7 @@ export default function Edit() {
     const handleSubmit = (e)=>{
         e.preventDefault();
 
-        const book = {
+        const trip = {
             location:location,
             cover:cover,
            description:description
