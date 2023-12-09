@@ -6,7 +6,7 @@ function Create() {
     const [location, setLocation] = useState('');
     const [cover, setCover] = useState('');
     const [description, setDescription] = useState('');
-    const [dateVisited, setDate] = useState('');
+    const [date, setDate] = useState('');
 
     const handleSubmit = (e)=>{
         e.preventDefault();
@@ -19,7 +19,8 @@ function Create() {
         const trip = {
             location:location,
             cover:cover,
-            description:description
+            description:description,
+            date:date
         };
 
         axios.post('http://localhost:4000/api/trip',trip)
@@ -54,6 +55,14 @@ function Create() {
                         className="form-control"
                         value={description}
                         onChange={(e) => { setDescription(e.target.value) }}
+                    />
+                </div>
+                <div className="form-group">
+                    <label>Add Trip Date: </label>
+                    <input type="text"
+                        className="form-control"
+                        value={date}
+                        onChange={(e) => { setDate(e.target.value) }}
                     />
                 </div>
                 <div>
