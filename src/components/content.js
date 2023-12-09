@@ -1,15 +1,17 @@
 function Content() {
     const imageStyle = {
         width: "100%",
-        maxWidth: "300px",
-        height: "auto",
-        margin: "10px",
+        maxWidth: "200px",
+        height: "200",
+        margin: "1px",
+        border: "5px solid black", // Add border style
     };
 
     const gridContainerStyle = {
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
-        gap: "20px",
+        gap: "1px", // Reduce the gap between images
+        justifyContent: "center", // Center the container horizontally
     };
 
     return (
@@ -61,5 +63,3 @@ function Content() {
 }
 
 export default Content;
-
-
