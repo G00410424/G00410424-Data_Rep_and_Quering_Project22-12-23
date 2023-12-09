@@ -23,6 +23,7 @@ function Content() {
             <br></br>
 
             <div style={gridContainerStyle}>
+
             <a href="https://en.wikipedia.org/wiki/Prague" target="_blank" rel="noopener noreferrer">
                 <img
                     src="/Prague.png"
@@ -30,35 +31,46 @@ function Content() {
                     style={imageStyle}
                 />
             </a>
+
+            <a href="https://en.wikipedia.org/wiki/Machu_Picchu" target="_blank" rel="noopener noreferrer">
                 <img
                     src="/MachuPicchu.jpg"
                     alt="Machu Picchu"
                     style={imageStyle}
                 />
+             </a>
 
+             <a href="https://en.wikipedia.org/wiki/Lisbon" target="_blank" rel="noopener noreferrer">
                 <img
                     src="/Lisbon.jpg"
                     alt="Lisbon"
                     style={imageStyle}
                 />
+            </a>
 
+            <a href="https://en.wikipedia.org/wiki/Belgrade" target="_blank" rel="noopener noreferrer">
                 <img
                     src="/Belgrade.jpg"
                     alt="Belgrade"
                     style={imageStyle}
                 />
-
+            </a>
+            
+            <a href="https://en.wikipedia.org/wiki/Krak%C3%B3w" target="_blank" rel="noopener noreferrer">
                 <img
                     src="/Krakow.jpg"
                     alt="Krakow"
                     style={imageStyle}
                 />
+            </a>
 
+            <a href="https://en.wikipedia.org/wiki/S%C3%A3o_Paulo" target="_blank" rel="noopener noreferrer">
                 <img
                     src="/SaoPaulo.jpg"
                     alt="SaoPaulo"
                     style={imageStyle}
                 />
+            </a>
 
                 {/* Add more images as needed */}
             </div>
