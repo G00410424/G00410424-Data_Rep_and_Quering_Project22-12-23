@@ -58,6 +58,7 @@ function Create() {
                     <input type="submit"
                     value="Add Trip">
                         </input>
+                        
                 </div>
             </form>
         </div>
