@@ -6,13 +6,15 @@ function Create() {
     const [location, setLocation] = useState('');
     const [cover, setCover] = useState('');
     const [description, setDescription] = useState('');
+    const [dateVisited, setDate] = useState('');
 
     const handleSubmit = (e)=>{
         e.preventDefault();
 
         console.log("Location: "+location+
         " Cover: "+cover+
-        " Description: "+description);
+        " Description: "+description,
+        " Date: "+date);
 
         const trip = {
             location:location,
