@@ -34,7 +34,8 @@ async function main() {
 const tripSchema = new mongoose.Schema({
   location:String,
   cover:String,
-  description:String
+  description:String,
+  date:String
 })
 
 const tripModel = mongoose.model('trips_of_mine', tripSchema);
@@ -61,7 +62,8 @@ app.post('/api/trip', (req,res)=>{
     tripModel.create({
       location:req.body.location,
       cover:req.body.cover,
-      description:req.body.description
+      description:req.body.description,
+      date:req.body.date
     })
     .then(()=>{ res.send("Trip Created")})
     .catch(()=>{ res.send("Trip NOT Created")});
