@@ -13,10 +13,19 @@ const formContainerStyle = {
 };
 
 const imageContainerStyle = {
-    flex: 1, // Take up 1 part of the flex container
-    marginLeft: "20px", // Add margin for spacing between form and image
+    marginLeft: "10px", // Adjusted margin to move the image more to the left
+    marginRight: "200px", // Added margin to bring the image closer to the forms
+    marginTop: "50px", // Adjusted top margin for the image
+    textAlign: "left",
 };
 
+
+const roundedImageStyle = {
+    width: "100%",
+    height: "auto",
+    borderRadius: "10%", // Added border-radius to make it circular
+    border: "20px solid #808080", // Added a 2px gray border
+};
 
 function Create() {
 
@@ -62,6 +71,7 @@ function Create() {
     }
     // some comment
     return (
+        <div>
         <div style={contentContainerStyle}>
             <div style={formContainerStyle}>
             <h2>Lets log out trips</h2>
@@ -115,15 +125,16 @@ function Create() {
                         
                 </div>
             </form>
-            <Footer />
         </div>
         <div style={imageContainerStyle}>
                 <img
                     src="travel-diary.jpg" // Replace with the correct path to your image
                     alt="Travel Diary"
-                    style={{ width: "100%", height: "auto" }} // Adjust the styling as needed
+                    style={roundedImageStyle}
                 />
+                </div>
             </div>
+            <Footer />
         </div>
         
     );
