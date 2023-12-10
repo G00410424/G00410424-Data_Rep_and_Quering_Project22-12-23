@@ -2,6 +2,13 @@
 
 import React, { useState } from "react";
 
+const searchContainerStyle = {
+  position: "absolute",
+  top: "10px",
+  right: "10px",
+  textAlign: "right",
+};
+
 function Search({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -10,7 +17,7 @@ function Search({ onSearch }) {
   };
 
   return (
-    <div>
+    <div style={searchContainerStyle}>
       <input
         type="text"
         placeholder="Search for a trip..."
