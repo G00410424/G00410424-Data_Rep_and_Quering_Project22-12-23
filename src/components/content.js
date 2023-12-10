@@ -77,12 +77,29 @@ function Content() {
             <br></br>
             <h1>Flight Searching Tools</h1>
             <br></br>
-            <h5>
+            <h6>
                 <p>Embarking on a journey becomes a breeze with my trusted flight-searching trio: Google Flights, Skyscanner, and Kayak. Google Flights stands out with its user-friendly interface and in-depth information, offering not only a range of flight options but also insights into the ideal booking times.</p>
                 <p>Skyscanner, another essential companion, boasts a powerful search engine that scours various airlines and travel agencies, presenting users with the most cost-effective choices. The "Everywhere" feature adds an element of spontaneity, allowing adventurers to explore destinations based on their budget.</p>
                 <p>Completing the trio is Kayak, a go-to platform for comprehensive flight searches. Kayak's robust technology sifts through a myriad of options, presenting users with a diverse array of flights to suit their preferences. Its user-friendly interface and efficient comparison tools simplify the decision-making process.</p>
                 <p>With this dynamic trio at my disposal, the once-daunting task of finding the perfect flight transforms into a seamless and enjoyable experience. Whether it's harnessing the predictive analytics of Google Flights, the extensive search capabilities of Skyscanner, or the comprehensive options provided by Kayak, these tools collectively elevate travel planning to new heights.</p>
-            </h5>
+            </h6>
+            <ul>
+                    <li>
+                        <a href="https://www.google.com/flights/" target="_blank" rel="noopener noreferrer">
+                            Google Flights
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.skyscanner.com/" target="_blank" rel="noopener noreferrer">
+                            Skyscanner
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.kayak.com/" target="_blank" rel="noopener noreferrer">
+                            Kayak
+                        </a>
+                    </li>
+                </ul>
 
 
         </div>
