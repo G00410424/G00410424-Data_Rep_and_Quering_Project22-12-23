@@ -13,6 +13,23 @@ export default function Edit() {
 
     const navigate = useNavigate();
 
+    const contentContainerStyle = {
+        display: "flex", // Use flexbox to arrange content
+        padding: "20px",
+        textAlign: "left",
+    };
+    
+    const formContainerStyle = {
+        flex: 1, // Take up 1 part of the flex container
+    };
+    
+    const imageContainerStyle = {
+        marginLeft: "10px", // Adjusted margin to move the image more to the left
+        marginRight: "200px", // Added margin to bring the image closer to the forms
+        marginTop: "50px", // Adjusted top margin for the image
+        textAlign: "left",
+    };
+    
     useEffect(
         ()=>{
             axios.get('http://localhost:4000/api/trip/'+id)
@@ -75,11 +92,12 @@ export default function Edit() {
                 </div>
                 <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>
                     <label>Edit Trip Description: </label>
-                    <input type="text"
+                    <textarea
                         className="form-control"
-                        style={{ width: "50%", marginTop: "1rem", border: "3px solid black"}}
+                        style={{ width: "50%", marginTop: "1rem", border: "3px solid black" }}
                         value={description}
                         onChange={(e) => { setDescription(e.target.value) }}
+                        rows={4}
                     />
                 </div>
                 <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>

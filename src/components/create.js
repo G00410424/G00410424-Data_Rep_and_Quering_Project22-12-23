@@ -24,7 +24,7 @@ const roundedImageStyle = {
     width: "100%",
     height: "auto",
     borderRadius: "10%", // Added border-radius to make it circular
-    border: "20px solid #808080", // Added a 2px gray border
+    border: "20px solid #808080", // Added a 20px gray border
 };
 
 function Create() {
@@ -115,7 +115,6 @@ function Create() {
                         style={{ width: "50%", marginTop: "1rem", border: "3px solid black" }} 
                         value={date}
                         onChange={(e) => { setDate(e.target.value) }}
-                        rows={4}
                     />
                 </div>
                 <div style={{ textAlign: "left", marginTop: "1rem"}}>
