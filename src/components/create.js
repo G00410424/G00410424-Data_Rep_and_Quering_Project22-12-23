@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { footerStyle, Footer } from './footer'; // Adjust the path based on your project structure
 
 const contentContainerStyle = {
     //border: "5px solid black", // Add border style
@@ -104,6 +105,7 @@ function Create() {
                         
                 </div>
             </form>
+            <Footer />
         </div>
     );
 

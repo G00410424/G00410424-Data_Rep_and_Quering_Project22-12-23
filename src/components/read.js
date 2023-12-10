@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Trips from "./trips";
 import Search from "./search";
+import { footerStyle, Footer } from './footer'; // Adjust the path based on your project structure
 
 function Read() {
   const [data, setData] = useState([]);
@@ -41,6 +42,7 @@ function Read() {
       <h2>Trips List</h2>
       <Search onSearch={handleSearch} />
       <Trips myTrips={filteredData.length > 0 ? filteredData : data} ReloadData={reload} />
+      <Footer />
     </div>
   );
 }
