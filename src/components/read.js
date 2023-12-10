@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Trips from "./trips";
-import Search from "./search"; // Import the new Search component
+import Search from "./search";
 
 function Read() {
   const [data, setData] = useState([]);
@@ -37,7 +37,7 @@ function Read() {
   };
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <h2>Hello from Read Component!</h2>
       <Search onSearch={handleSearch} />
       <Trips myTrips={filteredData.length > 0 ? filteredData : data} ReloadData={reload} />
