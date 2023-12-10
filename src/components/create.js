@@ -47,6 +47,7 @@ function Create() {
                     <input type="text"
                         placeholder="Sao Paulo - Brazil"
                         className="form-control"
+                        style={{ width: "50%" }} 
                         value={location}
                         onChange={(e) => { setLocation(e.target.value) }}
                     />
@@ -56,17 +57,20 @@ function Create() {
                     <input type="text"
                         placeholder="Find an image, right click, select 'Copy Image Link' and paste it here!"
                         className="form-control"
+                        style={{ width: "50%" }} 
                         value={cover}
                         onChange={(e) => { setCover(e.target.value) }}
                     />
                 </div>
                 <div className="form-group">
                     <label>Add Trip Description: </label>
-                    <input type="text"
+                    <textarea
                         placeholder="This trip was amazing!"
                         className="form-control"
+                        style={{ width: "50%", height: "100%" }}
                         value={description}
                         onChange={(e) => { setDescription(e.target.value) }}
+                        rows={4} // Set the number of visible rows
                     />
                 </div>
                 <div className="form-group">
@@ -74,8 +78,10 @@ function Create() {
                     <input type="text"
                         placeholder="September 2018"
                         className="form-control"
+                        style={{ width: "50%" }} 
                         value={date}
                         onChange={(e) => { setDate(e.target.value) }}
+                        rows={4}
                     />
                 </div>
                 <div>
