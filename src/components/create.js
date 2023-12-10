@@ -3,9 +3,18 @@ import axios from "axios";
 import { footerStyle, Footer } from './footer'; // Adjust the path based on your project structure
 
 const contentContainerStyle = {
-    //border: "5px solid black", // Add border style
-    padding: "20px", // Add padding for spacing
-    textAlign: "left", // Align text to the left
+    display: "flex", // Use flexbox to arrange content
+    padding: "20px",
+    textAlign: "left",
+};
+
+const formContainerStyle = {
+    flex: 1, // Take up 1 part of the flex container
+};
+
+const imageContainerStyle = {
+    flex: 1, // Take up 1 part of the flex container
+    marginLeft: "20px", // Add margin for spacing between form and image
 };
 
 
@@ -54,6 +63,7 @@ function Create() {
     // some comment
     return (
         <div style={contentContainerStyle}>
+            <div style={formContainerStyle}>
             <h2>Lets log out trips</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>
@@ -107,7 +117,16 @@ function Create() {
             </form>
             <Footer />
         </div>
+        <div style={imageContainerStyle}>
+                <img
+                    src="travel-diary.jpg" // Replace with the correct path to your image
+                    alt="Travel Diary"
+                    style={{ width: "100%", height: "auto" }} // Adjust the styling as needed
+                />
+            </div>
+        </div>
+        
     );
-
 }
+
 export default Create;
