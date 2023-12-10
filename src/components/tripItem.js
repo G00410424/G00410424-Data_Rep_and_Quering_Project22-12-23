@@ -12,11 +12,8 @@ function TripItem(props) {
                     <blockquote className="blockquote mb-0">
                         <img src={props.myTrip.cover}></img>
                         <footer>
-                            {props.myTrip.description
-                            }
-                            {
-                            props.myTrip.date
-                            }
+                            <p>{"Description: " + props.myTrip.description}</p>
+                            <p>{"Date of trip: " + props.myTrip.date}</p>
                         </footer>
                     </blockquote>
                 </Card.Body>
