@@ -38,7 +38,7 @@ function Read() {
 
   return (
     <div style={{ position: "relative" }}>
-      <h2>Hello from Read Component!</h2>
+      <h2>Trips List</h2>
       <Search onSearch={handleSearch} />
       <Trips myTrips={filteredData.length > 0 ? filteredData : data} ReloadData={reload} />
     </div>
