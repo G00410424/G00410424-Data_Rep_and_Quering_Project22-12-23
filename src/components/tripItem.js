@@ -10,7 +10,16 @@ function TripItem(props) {
                 <Card.Header>{props.myTrip.location}</Card.Header>
                 <Card.Body>
                     <blockquote className="blockquote mb-0">
-                        <img src={props.myTrip.cover}></img>
+                    <img
+                            src={props.myTrip.cover}
+                            alt="Trip cover"
+                            style={{
+                                width: "100%",
+                                maxWidth: "633px",
+                                height: "300px",
+                                border: "5px solid black",
+                            }}
+                        />
                         <footer>
                             <p>{"Description: " + props.myTrip.description}</p>
                             <p>{"Date of trip: " + props.myTrip.date}</p>
