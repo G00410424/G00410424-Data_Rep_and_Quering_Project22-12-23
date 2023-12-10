@@ -15,7 +15,6 @@ function Content() {
         justifyContent: "center", // Center the container horizontally
     };
 
-
     return (
         <div>
             <h1>Hello World, these are my trips!</h1>

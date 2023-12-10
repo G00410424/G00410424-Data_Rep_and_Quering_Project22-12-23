@@ -51,7 +51,7 @@ export default function Edit() {
     }
     return (
         <div>
-            <h2>Hello from Edit Component!</h2>
+            <h2>LETS EDIT OUR TRIPS</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>
                     <label>Edit Trip Location: </label>
