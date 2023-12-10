@@ -53,7 +53,7 @@ function Create() {
                     />
                 </div>
                 <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>
-                    <label>Add Location Cover: </label>
+                    <label>Add Trip Cover: </label>
                     <input type="text"
                         placeholder="Find an image, right click, select 'Copy Image Link' and paste it here!"
                         className="form-control"
