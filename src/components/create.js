@@ -24,8 +24,17 @@ function Create() {
         };
 
         axios.post('http://localhost:4000/api/trip',trip)
-        .then()
-        .catch();
+        .then(() => {
+            // Reset the form after successful submission
+            setLocation('');
+            setCover('');
+            setDescription('');
+            setDate('');
+        })
+        .catch(error => {
+            // Handle errors appropriately, e.g., show an error message
+            console.error("Error submitting form:", error);
+        });
 
     }
     // some comment

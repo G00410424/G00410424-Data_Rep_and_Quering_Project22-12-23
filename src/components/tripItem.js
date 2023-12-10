@@ -14,6 +14,9 @@ function TripItem(props) {
                         <footer>
                             {props.myTrip.description
                             }
+                            {
+                            props.myTrip.date
+                            }
                         </footer>
                     </blockquote>
                 </Card.Body>
