@@ -88,5 +88,5 @@ app.get('/api/trip/:identifier',async (req,res)=>{
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Trip App listening on port ${port}`)
 })
