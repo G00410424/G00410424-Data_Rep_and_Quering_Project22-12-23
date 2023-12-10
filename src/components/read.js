@@ -1,50 +1,48 @@
+// Read.js
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Trips from "./trips";
+import Search from "./search"; // Import the new Search component
 
 function Read() {
-   
-    const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
 
-  useEffect(
-    ()=>{
-        
-        axios.get('http://localhost:4000/api/trips')
-        .then(
-            (response)=>{
-                setData(response.data)
-            }
-        )
-        .catch(
-            (error)=>{
-                console.log(error);
-            }
-        )
+  useEffect(() => {
+    axios.get("http://localhost:4000/api/trips")
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
-    }, []
-  );
+  const reload = () => {
+    axios.get("http://localhost:4000/api/trips")
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-  const Reload = (e)=>{
-    axios.get('http://localhost:4000/api/trips')
-        .then(
-            (response)=>{
-                setData(response.data)
-            }
-        )
-        .catch(
-            (error)=>{
-                console.log(error);
-            }
-        )
-  }
-
-    return (
-        <div>
-            <h2>Hello from Read Component!</h2>
-            <Trips myTrips={data} ReloadData={Reload}></Trips>
-        </div>
+  const handleSearch = (searchTerm) => {
+    const filteredTrips = data.filter((trip) =>
+      trip.location.toLowerCase().includes(searchTerm.toLowerCase())
     );
+    setFilteredData(filteredTrips);
+  };
 
+  return (
+    <div>
+      <h2>Hello from Read Component!</h2>
+      <Search onSearch={handleSearch} />
+      <Trips myTrips={filteredData.length > 0 ? filteredData : data} ReloadData={reload} />
+    </div>
+  );
 }
 
 export default Read;
