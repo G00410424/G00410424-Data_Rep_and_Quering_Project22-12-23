@@ -92,7 +92,7 @@ export default function Edit() {
                 </div>
                 <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>
                     <label>Edit Trip Description: </label>
-                    <textarea
+                  <textarea
                         className="form-control"
                         style={{ width: "50%", marginTop: "1rem", border: "3px solid black" }}
                         value={description}
