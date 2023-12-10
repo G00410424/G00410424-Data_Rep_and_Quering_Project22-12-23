@@ -1,6 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
 
+const contentContainerStyle = {
+    border: "5px solid black", // Add border style
+    padding: "20px", // Add padding for spacing
+    textAlign: "left", // Align text to the left
+};
+
+
 function Create() {
 
     const [location, setLocation] = useState('');
@@ -36,10 +43,16 @@ function Create() {
             console.error("Error submitting form:", error);
         });
 
+                const contentContainerStyle = {
+            border: "5px solid black", // Add border style
+            padding: "20px", // Add padding for spacing
+            textAlign: "left", // Align text to the left
+        };
+
     }
     // some comment
     return (
-        <div>
+        <div style={contentContainerStyle}>
             <h2>Lets log out trips</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>

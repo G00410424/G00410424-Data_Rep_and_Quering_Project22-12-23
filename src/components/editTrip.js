@@ -2,6 +2,12 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+const contentContainerStyle = {
+    border: "5px solid black", // Add border style
+    padding: "20px", // Add padding for spacing
+    textAlign: "left", // Align text to the left
+};
+
 export default function Edit() {
     let {id} = useParams();
 
@@ -50,7 +56,7 @@ export default function Edit() {
             });
     }
     return (
-        <div>
+        <div style={contentContainerStyle}>
             <h2>LETS EDIT OUR TRIPS</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>

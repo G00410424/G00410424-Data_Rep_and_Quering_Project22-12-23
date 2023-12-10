@@ -15,8 +15,14 @@ function Content() {
         justifyContent: "center", // Center the container horizontally
     };
 
+    const contentContainerStyle = {
+        border: "5px solid black", // Add border style
+        padding: "20px", // Add padding for spacing
+        textAlign: "left", // Align text to the left
+    };
+
     return (
-        <div>
+        <div style={contentContainerStyle}> 
             <h1>Hello World, these are my trips!</h1>
             <h2>It is {new Date().toLocaleTimeString()}.</h2>
             <br></br>
