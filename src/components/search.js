@@ -24,7 +24,7 @@ function Search({ onSearch }) {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch}>Search for a Trip</button>
     </div>
   );
 }

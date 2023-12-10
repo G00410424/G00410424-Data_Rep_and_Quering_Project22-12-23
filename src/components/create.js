@@ -45,6 +45,7 @@ function Create() {
                 <div className="form-group">
                     <label>Add Trip Location: </label>
                     <input type="text"
+                        placeholder="Sao Paulo - Brazil"
                         className="form-control"
                         value={location}
                         onChange={(e) => { setLocation(e.target.value) }}
@@ -53,6 +54,7 @@ function Create() {
                 <div className="form-group">
                     <label>Add Location Cover: </label>
                     <input type="text"
+                        placeholder="Find an image, right click, select 'Copy Image Link' and paste it here!"
                         className="form-control"
                         value={cover}
                         onChange={(e) => { setCover(e.target.value) }}
@@ -61,6 +63,7 @@ function Create() {
                 <div className="form-group">
                     <label>Add Trip Description: </label>
                     <input type="text"
+                        placeholder="This trip was amazing!"
                         className="form-control"
                         value={description}
                         onChange={(e) => { setDescription(e.target.value) }}
@@ -69,6 +72,7 @@ function Create() {
                 <div className="form-group">
                     <label>Add Trip Date: </label>
                     <input type="text"
+                        placeholder="September 2018"
                         className="form-control"
                         value={date}
                         onChange={(e) => { setDate(e.target.value) }}
