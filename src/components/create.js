@@ -40,7 +40,7 @@ function Create() {
     // some comment
     return (
         <div>
-            <h2>Hello from create Component!</h2>
+            <h2>Lets log out trips</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>
                     <label>Add Trip Location: </label>
