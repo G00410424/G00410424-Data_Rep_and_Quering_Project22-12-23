@@ -1,3 +1,5 @@
+import { footerStyle, Footer } from './footer'; // Adjust the path based on your project structure
+
 function Content() {
     const imageStyle = {
         width: "100%",
@@ -16,7 +18,7 @@ function Content() {
     };
 
     const contentContainerStyle = {
-        border: "5px solid black", // Add border style
+       // border: "5px solid black", // Add border style
         padding: "20px", // Add padding for spacing
         textAlign: "left", // Align text to the left
     };
@@ -106,6 +108,7 @@ function Content() {
                         </a>
                     </li>
                 </ul>
+                <Footer />
         </div>
 
         
