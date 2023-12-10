@@ -84,7 +84,7 @@ function Create() {
                         rows={4}
                     />
                 </div>
-                <div>
+                <div style={{ textAlign: "left", marginTop: "1rem"}}>
                     <input type="submit"
                     value="Add Trip">
                         </input>
