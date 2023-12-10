@@ -53,45 +53,49 @@ export default function Edit() {
         <div>
             <h2>Hello from Edit Component!</h2>
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
+                <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>
                     <label>Edit Trip Location: </label>
                     <input type="text"
                         className="form-control"
+                        style={{ width: "50%", marginTop: "1rem", border: "3px solid black"}}
                         value={location}
                         onChange={(e) => { setLocation(e.target.value) }}
                     />
                 </div>
-                <div className="form-group">
+
+                <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>
                     <label>Edit Trip Cover: </label>
                     <input type="text"
                         className="form-control"
+                        style={{ width: "50%", marginTop: "1rem", border: "3px solid black"}}
                         value={cover}
                         onChange={(e) => { setCover(e.target.value) }}
                     />
                 </div>
-                <div className="form-group">
+                <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>
                     <label>Edit Trip Description: </label>
                     <input type="text"
                         className="form-control"
+                        style={{ width: "50%", marginTop: "1rem", border: "3px solid black"}}
                         value={description}
                         onChange={(e) => { setDescription(e.target.value) }}
                     />
                 </div>
-                <div className="form-group">
+                <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>
                     <label>Edit Trip Date: </label>
                     <input type="text"
                         className="form-control"
+                        style={{ width: "50%", marginTop: "1rem", border: "3px solid black"}}
                         value={date}
                         onChange={(e) => { setDescription(e.target.value) }}
                     />
                 </div>
-                <div>
+                <div style={{ textAlign: "left", marginTop: "1rem"}}>
                     <input type="submit"
                     value="Edit Trip">
                         </input>
                 </div>
             </form>
-
         </div>
     );
 }
