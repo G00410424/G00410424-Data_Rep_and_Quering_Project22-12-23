@@ -1,7 +1,9 @@
+// Import necessary modules
 import { useState } from "react";
 import axios from "axios";
-import { footerStyle, Footer } from './footer'; // Adjust the path based on your project structure
+import { footerStyle, Footer } from './footer'; 
 
+// Styles for various containers
 const contentContainerStyle = {
     display: "flex", // Use flexbox to arrange content
     padding: "20px",
@@ -19,7 +21,7 @@ const imageContainerStyle = {
     textAlign: "left",
 };
 
-
+// Styles for the "rounded" image
 const roundedImageStyle = {
     width: "100%",
     height: "auto",
@@ -27,21 +29,26 @@ const roundedImageStyle = {
     border: "20px solid #808080", // Added a 20px gray border
 };
 
+// React functional component for creating a trip
 function Create() {
 
+     // State variables for form input fields
     const [location, setLocation] = useState('');
     const [cover, setCover] = useState('');
     const [description, setDescription] = useState('');
     const [date, setDate] = useState('');
 
+    // Function to handle form submission
     const handleSubmit = (e)=>{
         e.preventDefault();
 
+         // Log form input values
         console.log("Location: "+location+
         " Cover: "+cover+
         " Description: "+description,
         " Date: "+date);
 
+        // Create trip object with form values
         const trip = {
             location:location,
             cover:cover,
@@ -49,6 +56,7 @@ function Create() {
             date:date
         };
 
+        // Use Axios to make a POST request to the server
         axios.post('http://localhost:4000/api/trip',trip)
         .then(() => {
             // Reset the form after successful submission
@@ -69,13 +77,18 @@ function Create() {
         };
 
     }
-    // some comment
+
+     // Return JSX for the component
     return (
         <div>
+            {/* Main content container */}
         <div style={contentContainerStyle}>
+            {/* Form container */}
             <div style={formContainerStyle}>
-            <h2>Lets log out trips</h2>
+            <h2>Lets log our trips</h2>
+            {/* Form for adding a new trip */}
             <form onSubmit={handleSubmit}>
+                {/* Form input fields */}
                 <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>
                     <label>Add Trip Location: </label>
                     <input type="text"
@@ -86,6 +99,8 @@ function Create() {
                         onChange={(e) => { setLocation(e.target.value) }}
                     />
                 </div>
+
+                 {/* Repeat similar blocks for other input fields */}
                 <div className="form-group" style={{ display: "block", textAlign: "left", marginTop: "2rem"}}>
                     <label>Add Trip Cover: </label>
                     <input type="text"
@@ -117,6 +132,7 @@ function Create() {
                         onChange={(e) => { setDate(e.target.value) }}
                     />
                 </div>
+                {/* Submit button */}
                 <div style={{ textAlign: "left", marginTop: "1rem"}}>
                     <input type="submit"
                     value="Add Trip">
@@ -125,18 +141,21 @@ function Create() {
                 </div>
             </form>
         </div>
+        {/* Image container */}
         <div style={imageContainerStyle}>
                 <img
-                    src="travel-diary.jpg" // Replace with the correct path to your image
+                    src="travel-diary.jpg" 
                     alt="Travel Diary"
                     style={roundedImageStyle}
                 />
                 </div>
             </div>
+            {/* Include the Footer component */}
             <Footer />
         </div>
         
     );
 }
 
+// Export the Create component as the default export
 export default Create;
