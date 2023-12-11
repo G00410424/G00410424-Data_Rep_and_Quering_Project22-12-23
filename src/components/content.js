@@ -1,15 +1,19 @@
+// Import required modules
 import { footerStyle, Footer } from './footer'; // Adjust the path based on your project structure
 
+// React functional component for the main content
 function Content() {
+    // Styles for the images
     const imageStyle = {
         width: "100%",
         maxWidth: "633px",
         height: "300px",
         margin: "1px",
-        border: "5px solid black", // Add border style
+        border: "5px solid black", 
         transition: "transform 0.2s", // Add a smooth transition effect
     };
 
+    // Styles for the grid container
     const gridContainerStyle = {
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
@@ -17,20 +21,23 @@ function Content() {
         justifyContent: "center", // Center the container horizontally
     };
 
+     // Styles for the main content container
     const contentContainerStyle = {
-       // border: "5px solid black", // Add border style
         padding: "20px", // Add padding for spacing
         textAlign: "left", // Align text to the left
     };
 
     return (
+        //Header
         <div style={contentContainerStyle}> 
             <h1>Hello World, these are my trips!</h1>
             <h2>It is {new Date().toLocaleTimeString()}.</h2>
             <br></br>
 
+            {/* Grid container for images */}
             <div style={gridContainerStyle}>
 
+            {/* Individual images with links */}
             <a href="https://en.wikipedia.org/wiki/Prague" target="_blank" rel="noopener noreferrer">
                 <img
                     src="/Prague.png"
@@ -39,6 +46,7 @@ function Content() {
                 />
             </a>
 
+            {/* Repeat similar block for other images */}
             <a href="https://en.wikipedia.org/wiki/Machu_Picchu" target="_blank" rel="noopener noreferrer">
                 <img
                     src="/MachuPicchu.jpg"
@@ -78,10 +86,9 @@ function Content() {
                     style={imageStyle}
                 />
             </a>
-
-                {/* Add more images as needed */}
             </div>
 
+            {/* Flight Searching Tools Section */}
             <br></br>
             <h1>Flight Searching Tools</h1>
             <br></br>
@@ -108,6 +115,7 @@ function Content() {
                         </a>
                     </li>
                 </ul>
+                {/* Include the Footer component */}
                 <Footer />
         </div>
 
@@ -115,4 +123,5 @@ function Content() {
     );
 }
 
+// Export the Content component as the default export
 export default Content;
