@@ -1,3 +1,6 @@
+// Header.js - This file defines the header component.
+
+// Functional component representing the header
 function Header(){
     return(
         <div>
@@ -6,4 +9,5 @@ function Header(){
     );
 }
 
+// Exporting the Header component for use in other files
 export default Header;
