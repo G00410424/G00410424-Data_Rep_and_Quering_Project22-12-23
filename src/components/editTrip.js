@@ -1,3 +1,5 @@
+//editTrip.js - to edit parameters of trips
+
 // Import necessary modules
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";

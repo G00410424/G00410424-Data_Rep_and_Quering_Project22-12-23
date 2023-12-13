@@ -1,4 +1,5 @@
-// Footer.js
+// Footer.js - this create the footer code, sO I just import to the pages I want. 
+
 import React from 'react';
 
 const footerStyle = {

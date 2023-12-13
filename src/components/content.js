@@ -1,3 +1,5 @@
+//content.js - main page.
+
 // Import required modules
 import { footerStyle, Footer } from './footer'; // Adjust the path based on your project structure
 
