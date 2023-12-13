@@ -159,5 +159,5 @@ function Create() {
     );
 }
 
-// Export the Create component as the default export
+// Exporting the styles and the component for use in other files
 export default Create;

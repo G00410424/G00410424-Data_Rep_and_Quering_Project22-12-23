@@ -10,6 +10,7 @@ const footerStyle = {
     color: "white", // Set text color to white for better visibility
 };
 
+// Functional component representing the footer
 function Footer() {
     return (
         <div style={footerStyle}>
@@ -18,4 +19,5 @@ function Footer() {
     );
 }
 
+// Exporting the styles and the component for use in other files
 export { footerStyle, Footer };

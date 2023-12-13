@@ -125,5 +125,5 @@ function Content() {
     );
 }
 
-// Export the Content component as the default export
+// Exporting the styles and the component for use in other files
 export default Content;
