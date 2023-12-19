@@ -13,7 +13,7 @@ function Read() {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
 
-    // Fetch data from the API when the component mounts
+  // Fetch data from the API when the component mounts
   useEffect(() => {
     axios.get("http://localhost:4000/api/trips")
       .then((response) => {

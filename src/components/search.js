@@ -13,7 +13,7 @@ const searchContainerStyle = {
 
 // Functional component representing the search input and button
 function Search({ onSearch }) {
-    // State to store the search term entered by the user
+  // State to store the search term entered by the user
   const [searchTerm, setSearchTerm] = useState("");
 
   // Function to handle the search and invoke the onSearch callback
